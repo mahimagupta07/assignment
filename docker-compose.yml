@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - ./input:/app/input
+      - ./output:/app/output
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

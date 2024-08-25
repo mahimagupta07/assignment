@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Assignment</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="assignment">Assignment</h1>
+<p>Given: source data file (members-data.csv),</p>
+<p>Build an ETL pipeline with a Test-Driven Development (TDD) approach by performing the following tasks:</p>
+<ul>
+<li>
+<p>Read data from a file(s) having pipe separated data (data)</p>
+</li>
+<li>
+<p>Transform data to data model</p>
+</li>
+<li>
+<p>Load the data into any database or store as document collection to disk</p>
+</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Python 3.8+</li>
+<li>MongoDB / json documents</li>
+</ul>
+<p>minimal third party libraries</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="reading-data-from-the-given-file">Reading Data from the given file</h3>
+<p>Create a read_data() method that takes a file path as an argument and reads the file. Return an in-memory data structure such as a list of dictionaries or a Pandas DataFrame.</p>
+<table>
+<thead>
+<tr>
+<th>column names</th>
+<th>types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FirstName</td>
+<td>string</td>
+</tr>
+<tr>
+<td>LastName</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Company</td>
+<td>string</td>
+</tr>
+<tr>
+<td>BirthDate</td>
+<td>number</td>
+</tr>
+<tr>
+<td>Salary</td>
+<td>number</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Suburb</td>
+<td>string</td>
+</tr>
+<tr>
+<td>State</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Post</td>
+<td>number</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td>number</td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>number</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transforming-data">Transforming data</h3>
+<p>Create a transform_data() method that takes the in-memory data structure from the previous step as an argument. Perform the following transformation tasks:</p>
+<ul>
+<li>
+<p>Convert the BirthDate from the format YYYY-MM-DD to DD/MM/YYYY, Salary in $ format with commas</p>
+</li>
+<li>
+<p>Do some cleaning on FirstName and LastName columns when needed and remove any leading/trailing spaces.</p>
+</li>
+<li>
+<p>Merge the FirstName and LastName columns into a new column named FullName.</p>
+</li>
+<li>
+<p>Calculate each employees's age from the BirthDate column using as reference Mar 1st, 2024. Add a new column named Age to store the computed age.</p>
+</li>
+<li>
+<p>Add a new column named SalaryBucket to categorize the employees based on their salary as follows:</p>
+<ul>
+<li>A for employees earning below 50.000</li>
+<li>B for employees earning between 50.000 and 100.000</li>
+<li>C for employees earning above 100.000</li>
+</ul>
+</li>
+<li>
+<p>Drop columns FirstName, LastName</p>
+<p>build nested entity class to have address as nested class.</p>
+</li>
+</ul>
+<h3 id="loading-the-data-into-mongodb-or-save-as-json-file">Loading the Data into MongoDB or save as json file</h3>
+<p>Create a load_data() method that takes the transformed data as an argument, connects to the MongoDB database and inserts the given data into a predefined collection.</p>
+<h2 id="docker-compose-optional">Docker Compose [Optional]</h2>
+<p>Create a Dockerfile to create a Docker image of your Python application.</p>
+<p>Set up a docker-compose.yml file where you will define the services. Configure two services:</p>
+<ul>
+<li>Python application with your ETL pipeline and</li>
+<li>MongoDB database.</li>
+</ul>
+<p>Ensure that both services can communicate with each other.</p>
+<h2 id="deliverables">Deliverables</h2>
+<p>The minimum we expect to see in your submission is:</p>
+<ul>
+<li><a href="http://main.py">main.py</a>, the main ETL script containing the core methods: read_csv(), transform_data(), and load_data().</li>
+<li>Test suites for everything you think should be tested.</li>
+<li>package dependencies</li>
+<li>A Dockerfile to create a Docker image of the Python application [Optional].</li>
+<li>A docker-compose.yml file defining the required services [Optional].</li>
+<li>A <a href="http://README.html">README.md</a> file with instructions for setting up and running the ETL pipeline using Docker Compose.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Please submit your assignment as a link to a <code>GitHub</code> repository containing the required files. You can also create a private repository and share it with us.</p>
+<h2 id="notes">Notes</h2>
+<p>We will value your focus on TDD throughout all the development process.</p>
+<p>Feel free to use any framework, pattern to implement the ETL pipeline and document your approach accordingly in the <a href="http://README.html">README.md</a> file.</p>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>

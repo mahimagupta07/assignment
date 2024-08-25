@@ -1,0 +1,11 @@
+# config.yaml
+mongo:
+  url: mongodb://mongo:27017/
+  username:
+  password:
+database:
+  name: mahima
+  collection: data
+file:
+  input: input/member-data.csv
+  output: output/member-data.json
